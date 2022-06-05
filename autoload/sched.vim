@@ -16,8 +16,6 @@ function! sched#init() abort
     let finish = interval[1]
     if commence <= curr_time && curr_time < finish
       let task = trim(split(line, '│')[1])
-      echo task
-      echo line
       execute("match SignColumn /" . line . "/")
     endif
   endfor
