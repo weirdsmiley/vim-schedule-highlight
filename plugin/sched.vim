@@ -15,3 +15,4 @@ endfunction
 
 " command! -nargs=0 SchedHi :call s:start()
 command! -nargs=0 SchedHi :call sched#init()
+" autocmd! BufEnter <buffer> execute("SchedHi")
