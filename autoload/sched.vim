@@ -16,7 +16,8 @@ function! sched#init() abort
     let finish = interval[1]
     if commence <= curr_time && curr_time < finish
       let task = trim(split(line, '│')[1])
-      execute("match SignColumn /" . line . "/")
+      execute("highlight SchedColumn ctermbg=23")
+      execute("match SchedColumn /" . line . "/")
     endif
   endfor
 endfunction
